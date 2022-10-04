@@ -10,5 +10,5 @@ data class Card (
             @Json(name = "hp") val hp: String = "",
             @Json(name = "images") val images: CardImages,
             @Json(name = "attacks") val attacks: List<CardAttacks>,
-            @Json(name = "types") val types: List<String> = listOf()
+            @Json(name = "subtypes") val subtypes: List<String> = listOf()
         )

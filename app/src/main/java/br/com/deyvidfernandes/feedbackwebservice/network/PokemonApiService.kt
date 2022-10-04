@@ -19,14 +19,14 @@ import javax.net.ssl.*
 private const val URL = "https://api.pokemontcg.io/v2/"
 
 private val moshi = Moshi.Builder()
-                        .add(KotlinJsonAdapterFactory())
-                        .build()
+    .add(KotlinJsonAdapterFactory())
+    .build()
 
 private val retrofit = Retrofit.Builder()
-                        .client(getUnsafeOkHttpClient())
-                        .addConverterFactory(MoshiConverterFactory.create(moshi))
-                        .baseUrl(URL)
-                        .build()
+    .client(getUnsafeOkHttpClient())
+    .addConverterFactory(MoshiConverterFactory.create(moshi))
+    .baseUrl(URL)
+    .build()
 
 interface PokemonApiService {
     @GET("cards/?pageSize=30")
